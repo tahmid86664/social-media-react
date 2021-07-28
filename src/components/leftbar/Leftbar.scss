@@ -1,0 +1,78 @@
+.leftbar {
+  flex: 3;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888888;
+    border-radius: 50px;
+  }
+
+  .leftbar__wrapper {
+    padding: 20px;
+
+    .leftbar__list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      .leftbar__listItem {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        .MuiSvgIcon-root {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .leftbar__button {
+      padding: 10px 25px;
+      font-size: 14px;
+      font-weight: 500;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      outline-width: 0;
+
+      &:focus {
+        outline-width: 0;
+      }
+    }
+
+    .leftbar__hr {
+      margin: 20px 0;
+    }
+
+    .leftbar__friendList {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      .leftbar__friend {
+        display: flex;
+        align-items: center;
+
+        .leftbar__friendImg {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 10px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
