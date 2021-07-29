@@ -40,37 +40,6 @@
         padding: 0;
         margin: 0;
         list-style: none;
-
-        .rightbar__onlineFriend {
-          display: flex;
-          align-items: center;
-
-          .rightbar__onlineFriendImgContainer {
-            margin-right: 15px;
-            position: relative;
-
-            img {
-              width: 45px;
-              height: 45px;
-              border-radius: 50%;
-              object-fit: cover;
-            }
-  
-            .rightbar__onlineBadge {
-              width: 12px;
-              height: 12px;
-              border-radius: 50%;
-              background-color: #10c410;
-              position: absolute;
-              right: 1px;
-            }
-          }
-
-          .rightbar__onlineFriendUsername {
-            font-size: 16px;
-            font-weight: 500;
-          }
-        }
       }
     }
   }

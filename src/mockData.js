@@ -1,0 +1,140 @@
+export const users = [
+  {
+    id: 1,
+    name: "Lisa Anabelle",
+    imgUrl: "/assets/person/1.jpeg",
+    birthdate: "7/30/1989",
+    isOnline: true,
+    isLogin: true
+  },
+  {
+    id: 2,
+    name: "James Rick",
+    imgUrl: "/assets/person/2.jpg",
+    birthdate: "7/30/1984",
+    isOnline: true,
+    isLogin: false
+  },
+  {
+    id: 3,
+    name: "Joe Doe",
+    imgUrl: "/assets/person/3.jpg",
+    birthdate: "7/30/1990",
+    isOnline: false,
+    isLogin: false    
+  },
+  {
+    id: 4,
+    name: "Richard Rimmy",
+    imgUrl: "/assets/person/4.jpg",
+    birthdate: "2/20/1989",
+    isOnline: true,
+    isLogin: false
+  },
+  {
+    id: 5,
+    name: "Salena James",
+    imgUrl: "/assets/person/5.jpg",
+    birthdate: "7/10/1989",
+    isOnline: true,
+    isLogin: false
+  },
+  {
+    id: 6,
+    name: "James Fredrickson",
+    imgUrl: "/assets/person/6.jpg",
+    birthdate: "7/30/1984",
+    isOnline: false,
+    isLogin: false
+  },
+  {
+    id: 7,
+    name: "Denim Fred",
+    imgUrl: "/assets/person/7.jpg",
+    birthdate: "3/5/1984",
+    isOnline: true,
+    isLogin: false
+  },
+  {
+    id: 8,
+    name: "Zosef Shamp",
+    imgUrl: "/assets/person/8.jpg",
+    birthdate: "1/16/1975",
+    isOnline: true,
+    isLogin: false
+  },
+  {
+    id: 9,
+    name: "Sophia Charlotte",
+    imgUrl: "/assets/person/9.jpeg",
+    birthdate: "8/25/1994",
+    isOnline: false,
+    isLogin: false
+  },
+  {
+    id: 10,
+    name: "Emma Isabella",
+    imgUrl: "/assets/person/10.jpeg",
+    birthdate: "5/25/1991",
+    isOnline: true,
+    isLogin: false
+  },
+];
+
+export const posts = [
+  {
+    id: 1,
+    postUserId: 1,
+    postUserTimestamp: "10 mins ago",
+    postText: "Hey! It's a first post from me <3 <3 <3",
+    postImg: "/assets/post/1.jpeg",
+    postLikes: 27,
+    postCommentsCount: 4
+  },
+  {
+    id: 2,
+    postUserId: 2,
+    postUserTimestamp: "2 mins ago",
+    postText: "I'm too busy now. Working from home",
+    postImg: "/assets/post/2.jpg",
+    postLikes: 11,
+    postCommentsCount: 2
+  },
+  {
+    id: 3,
+    postUserId: 3,
+    postUserTimestamp: "5 mins ago",
+    postText: "Hey! What's going on people? Let's help orphan child. Contact with me. Email: joedoe@gmail.com",
+    postImg: "/assets/post/3.jpg",
+    postLikes: 21,
+    postCommentsCount: 3
+  },
+  {
+    id: 4,
+    postUserId: 4,
+    postUserTimestamp: "25 mins ago",
+    postText: "I'm going to send some foods to a village. Do you want to join me? :D :D",
+    postImg: "/assets/post/4.jpg",
+    postLikes: 51,
+    postCommentsCount: 15
+  },
+  {
+    id: 5,
+    postUserId: 5,
+    postUserTimestamp: "1 hour ago",
+    postText: "Hey! I'm going to start building MERN stack project 😁",
+    postImg: "/assets/post/5.jpg",
+    postLikes: 72,
+    postCommentsCount: 21
+  },
+  {
+    id: 6,
+    postUserId: 8,
+    postUserTimestamp: "13 mins ago",
+    postText: "Without strategy you can't go for a perfection",
+    postImg: "/assets/post/6.jpg",
+    postLikes: 35,
+    postCommentsCount: 5
+  },
+];
+

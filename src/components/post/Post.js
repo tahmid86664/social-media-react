@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Post.scss';
 import { MoreVert } from '@material-ui/icons';
 import ReactEmoji from 'react-emoji';
+import { users } from '../../mockData';
 
-const Post = ({ postUserImg, postUserName, postUserTimestamp, postImg, postText, postLikes, postCommentCount }) => {
+const Post = ({ id, postUserId, postUserTimestamp, postImg, postText, postLikes, postCommentCount }) => {
+  const [likes, setLikes] = useState(postLikes);
+  const [isLiked, setIsLiked] = useState(false);
+
+  const likeHandler = () => {
+    setLikes(isLiked ? likes-1 : likes+1);
+    setIsLiked(!isLiked);
+  }
+
   return (
     <div className="post">
       <div className="post__wrapper">
         <div className="post__top">
           <div className="post__topLeft">
-            <img src={postUserImg} alt="post top profile img" className="post__topImg" />
-            <span className="post__topLeftUsername">{postUserName}</span>
+            <img src={users.filter(user => user.id === postUserId)[0].imgUrl} alt="post top profile img" className="post__topImg" />
+            <span className="post__topLeftUsername">{users.filter(user => user.id === postUserId)[0].name}</span>
             <span className="post__topLeftTimestamp">{postUserTimestamp}</span>
           </div>
           <div className="post__topRight">
@@ -23,9 +32,9 @@ const Post = ({ postUserImg, postUserName, postUserTimestamp, postImg, postText,
         </div>
         <div className="post__bottom">
           <div className="post__bottomLeft">
-            <img src="/assets/like.png" alt="like button" className="post__likeButton" />
-            <img src="/assets/heart.png" alt="like button" className="post__likeButton" />
-            <span className="post__bottomLikeCount">{postLikes} people like it</span>
+            <img src="/assets/like.png" alt="like button" className="post__likeButton" onClick={likeHandler} />
+            <img src="/assets/heart.png" alt="like button" className="post__likeButton" onClick={likeHandler} />
+            <span className="post__bottomLikeCount">{likes} people {isLiked && "including you"} react it </span>
           </div>
           <div className="post__bottomRight">
             <span className="post__bottomCommentCount">{postCommentCount} comments</span>

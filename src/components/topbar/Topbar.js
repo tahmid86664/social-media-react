@@ -1,6 +1,7 @@
 import React from 'react';
 import './Topbar.scss';
 import { Search, Person, Chat, Notifications } from '@material-ui/icons';
+import { users } from '../../mockData';
 
 const Topbar = () => {
   return (
@@ -33,7 +34,7 @@ const Topbar = () => {
             <span className="topbarIconBadge">1</span>
           </div>
         </div>
-        <img className="topbarProfileImg" src="/assets/person/1.jpeg" alt="profile" />
+        <img className="topbarProfileImg" src={users.filter(user => user.isLogin)[0].imgUrl} alt="profile" />
       </div>
     </div>
   );

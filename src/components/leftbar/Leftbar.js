@@ -1,6 +1,8 @@
 import React from 'react';
 import './Leftbar.scss';
 import { RssFeed, Chat, Theaters, Group, Event, Bookmark, Help, Work } from '@material-ui/icons';
+import { users } from '../../mockData';
+import CloseFriends from '../close_friends/CloseFriends';
 
 const Leftbar = () => {
   return (
@@ -43,69 +45,11 @@ const Leftbar = () => {
         <button className="leftbar__button">Show More</button>
         <hr className="leftbar__hr" />
         <ul className="leftbar__friendList">
-          <li className="leftbar__friend">
-            <img src="/assets/person/2.jpg" 
-              alt="friend profile img" 
-              className="leftbar__friendImg" 
-            />
-            <span className="leftbar__friendName">James Rick</span>
-          </li>
-          <li className="leftbar__friend">
-            <img src="/assets/person/3.jpg" 
-              alt="friend profile img" 
-              className="leftbar__friendImg" 
-            />
-            <span className="leftbar__friendName">Joe Doe</span>
-          </li>
-          <li className="leftbar__friend">
-            <img src="/assets/person/4.jpg" 
-              alt="friend profile img" 
-              className="leftbar__friendImg" 
-            />
-            <span className="leftbar__friendName">Richard Rimmy</span>
-          </li>
-          <li className="leftbar__friend">
-            <img src="/assets/person/5.jpg" 
-              alt="friend profile img" 
-              className="leftbar__friendImg" 
-            />
-            <span className="leftbar__friendName">Salena James</span>
-          </li>
-          <li className="leftbar__friend">
-            <img src="/assets/person/6.jpg" 
-              alt="friend profile img" 
-              className="leftbar__friendImg" 
-            />
-            <span className="leftbar__friendName">James Fredrickson</span>
-          </li>
-          <li className="leftbar__friend">
-            <img src="/assets/person/7.jpg" 
-              alt="friend profile img" 
-              className="leftbar__friendImg" 
-            />
-            <span className="leftbar__friendName">Denim Fred</span>
-          </li>
-          <li className="leftbar__friend">
-            <img src="/assets/person/8.jpg" 
-              alt="friend profile img" 
-              className="leftbar__friendImg" 
-            />
-            <span className="leftbar__friendName">Zosef Shamp</span>
-          </li>
-          <li className="leftbar__friend">
-            <img src="/assets/person/9.jpeg" 
-              alt="friend profile img" 
-              className="leftbar__friendImg" 
-            />
-            <span className="leftbar__friendName">Sophia Charlotte</span>
-          </li>
-          <li className="leftbar__friend">
-            <img src="/assets/person/10.jpeg" 
-              alt="friend profile img" 
-              className="leftbar__friendImg" 
-            />
-            <span className="leftbar__friendName">Emma Isabella</span>
-          </li>
+          {
+            users.filter(user => !user.isLogin).map(user => 
+              <CloseFriends key={user.id} user={user} />
+            )
+          }
         </ul>
       </div>
     </div>
