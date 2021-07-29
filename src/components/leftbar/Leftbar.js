@@ -78,6 +78,34 @@ const Leftbar = () => {
             />
             <span className="leftbar__friendName">James Fredrickson</span>
           </li>
+          <li className="leftbar__friend">
+            <img src="/assets/person/7.jpg" 
+              alt="friend profile img" 
+              className="leftbar__friendImg" 
+            />
+            <span className="leftbar__friendName">Denim Fred</span>
+          </li>
+          <li className="leftbar__friend">
+            <img src="/assets/person/8.jpg" 
+              alt="friend profile img" 
+              className="leftbar__friendImg" 
+            />
+            <span className="leftbar__friendName">Zosef Shamp</span>
+          </li>
+          <li className="leftbar__friend">
+            <img src="/assets/person/9.jpeg" 
+              alt="friend profile img" 
+              className="leftbar__friendImg" 
+            />
+            <span className="leftbar__friendName">Sophia Charlotte</span>
+          </li>
+          <li className="leftbar__friend">
+            <img src="/assets/person/10.jpeg" 
+              alt="friend profile img" 
+              className="leftbar__friendImg" 
+            />
+            <span className="leftbar__friendName">Emma Isabella</span>
+          </li>
         </ul>
       </div>
     </div>
