@@ -1,7 +1,9 @@
+@import '../../global.scss';
+
 .topbar {
   height: 50px;
   width: 100%;
-  background-color: #ff9900;
+  background-color: $maincolor;
   display: flex;
   align-items: center;
   position: sticky;
