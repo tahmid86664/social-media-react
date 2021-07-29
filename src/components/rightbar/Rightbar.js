@@ -1,48 +1,19 @@
 import React from 'react';
 import './Rightbar.scss';
-import { users } from '../../mockData';
-import OnlineFriends from '../online_friends/OnlineFriends';
+import HomeRightbar from '../home_rightbar/HomeRightbar';
+import ProfileRightbar from '../profile_rightbar/ProfileRightbar';
 
-const Rightbar = () => {
-  let birthdayPeople = users.filter(user => user.birthdate.slice(0, 4) === new Date().toLocaleDateString().slice(0, 4) && !user.isLogin);
-
+const Rightbar = ({ profile }) => {
   return (
     <div className="rightbar">
       <div className="rightbar__wrapper">
-        <div className="rightbar__birthdayContainer">
-          <img src="/assets/gift.png" alt="gift icon" className="birthdayImg" />
-          <span className="birthdayText">
-            {
-              birthdayPeople.length === 0 ?
-              (
-                <span>No birthday today</span>
-              ) : (  
-                 birthdayPeople.length === 1 ? (
-                  <span><b>{birthdayPeople[0].name}</b> has birthday today</span>
-                ) : (
-                  <span>
-                    <b>{birthdayPeople[0].name}</b> and 
-                    {birthdayPeople.length>2 ? (<span><b>{birthdayPeople.length-1} other friends </b> have birthday today</span>) 
-                      : (<span><b>{birthdayPeople[1].name}</b> have birthday today</span>)}
-                  </span>
-                )
-              )
-            }
-          </span>
-        </div>
-        <div className="rightbar__ad">
-          <img src="/assets/ad.png" alt="ad img" className="rightbar__adImg" />
-        </div>
-        <div className="rightbar__onlineFriendsContainer">
-          <h4>Online Friends</h4>
-          <ul className="rightbar__onlineFriendList">
-            {
-              users.filter(user => user.isOnline && !user.isLogin).map(user => 
-                <OnlineFriends key={user.id} user={user} />
-              )
-            }
-          </ul>
-        </div>
+        {
+          profile ? (
+            <ProfileRightbar />
+          ) : (
+            <HomeRightbar />
+          )
+        }
       </div>
     </div>
   );

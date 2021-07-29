@@ -1,0 +1,38 @@
+.rightbar__birthdayContainer {
+  display: flex;
+  align-items: center;
+
+  .birthdayImg {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .birthdayText {
+    font-weight: 300;
+    font-size: 15px;
+  }
+}
+
+.rightbar__ad {
+
+  .rightbar__adImg {
+    width: 90%;
+    max-height: 350px;
+    margin: 20px 0;
+    border-radius: 20px;
+  }
+}
+
+.rightbar__onlineFriendsContainer {
+
+  h4{
+    margin-bottom: 10px;
+  }
+
+  .rightbar__onlineFriendList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
