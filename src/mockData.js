@@ -5,7 +5,8 @@ export const users = [
     imgUrl: "/assets/person/1.jpeg",
     birthdate: "7/30/1989",
     isOnline: true,
-    isLogin: true
+    isLogin: false,
+    desc: "Hello I'm a funky MERN Dev"
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ export const users = [
     imgUrl: "/assets/person/2.jpg",
     birthdate: "7/30/1984",
     isOnline: true,
-    isLogin: false
+    isLogin: false,
+    desc: "I believe in time"
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ export const users = [
     imgUrl: "/assets/person/3.jpg",
     birthdate: "7/30/1990",
     isOnline: false,
-    isLogin: false    
+    isLogin: false,
+    desc: "I'm nothing compare to nothing"
   },
   {
     id: 4,
@@ -29,7 +32,8 @@ export const users = [
     imgUrl: "/assets/person/4.jpg",
     birthdate: "2/20/1989",
     isOnline: true,
-    isLogin: false
+    isLogin: false,
+    desc: "Hey! I'm a React Native Dev"
   },
   {
     id: 5,
@@ -37,7 +41,8 @@ export const users = [
     imgUrl: "/assets/person/5.jpg",
     birthdate: "7/10/1989",
     isOnline: true,
-    isLogin: false
+    isLogin: false,
+    desc: "Nature gives me life"
   },
   {
     id: 6,
@@ -45,7 +50,8 @@ export const users = [
     imgUrl: "/assets/person/6.jpg",
     birthdate: "7/30/1984",
     isOnline: false,
-    isLogin: false
+    isLogin: true,
+    desc: "Fredrickson is a son of Rock"
   },
   {
     id: 7,
@@ -53,7 +59,8 @@ export const users = [
     imgUrl: "/assets/person/7.jpg",
     birthdate: "3/5/1984",
     isOnline: true,
-    isLogin: false
+    isLogin: false,
+    desc: "I follow my own strategy"
   },
   {
     id: 8,
@@ -61,7 +68,8 @@ export const users = [
     imgUrl: "/assets/person/8.jpg",
     birthdate: "1/16/1975",
     isOnline: true,
-    isLogin: false
+    isLogin: false,
+    desc: "Time is money"
   },
   {
     id: 9,
@@ -69,7 +77,8 @@ export const users = [
     imgUrl: "/assets/person/9.jpeg",
     birthdate: "8/25/1994",
     isOnline: false,
-    isLogin: false
+    isLogin: false,
+    desc: "I love to fight with time"
   },
   {
     id: 10,
@@ -77,7 +86,8 @@ export const users = [
     imgUrl: "/assets/person/10.jpeg",
     birthdate: "5/25/1991",
     isOnline: true,
-    isLogin: false
+    isLogin: false,
+    desc: "Nothing I'm"
   },
 ];
 
