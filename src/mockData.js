@@ -39,7 +39,7 @@ export const users = [
     id: 5,
     name: "Salena James",
     imgUrl: "/assets/person/5.jpg",
-    birthdate: "7/10/1989",
+    birthdate: "8/2/1989",
     isOnline: true,
     isLogin: false,
     desc: "Nature gives me life"
@@ -57,7 +57,7 @@ export const users = [
     id: 7,
     name: "Denim Fred",
     imgUrl: "/assets/person/7.jpg",
-    birthdate: "3/5/1984",
+    birthdate: "8/2/1984",
     isOnline: true,
     isLogin: false,
     desc: "I follow my own strategy"

@@ -3,8 +3,8 @@ import './HomeRightbar.scss';
 import { users } from '../../mockData';
 import OnlineFriends from '../online_friends/OnlineFriends';
 
-const HomeRightbar = () => {
-  let birthdayPeople = users.filter(user => user.birthdate.slice(0, 4) === new Date().toLocaleDateString().slice(0, 4) && !user.isLogin);
+const HomeRightbar = ({currentUser}) => {
+  let birthdayPeople = users.filter(user => user.birthdate.slice(0, 4) === new Date().toLocaleDateString().slice(0, 4) && user.id !== currentUser);
 
   return (
     <>
@@ -22,7 +22,7 @@ const HomeRightbar = () => {
                 <span>
                   <b>{birthdayPeople[0].name}</b> and 
                   {birthdayPeople.length>2 ? (<span><b>{birthdayPeople.length-1} other friends </b> have birthday today</span>) 
-                    : (<span><b>{birthdayPeople[1].name}</b> have birthday today</span>)}
+                    : (<span> <b>{birthdayPeople[1].name}</b> have birthday today</span>)}
                 </span>
               )
             )
@@ -36,7 +36,7 @@ const HomeRightbar = () => {
         <h4>Online Friends</h4>
         <ul className="rightbar__onlineFriendList">
           {
-            users.filter(user => user.isOnline && !user.isLogin).map(user => 
+            users.filter(user => user.isOnline && user.id !== currentUser).map(user => 
               <OnlineFriends key={user.id} user={user} />
             )
           }

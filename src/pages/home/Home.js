@@ -6,14 +6,14 @@ import Leftbar from '../../components/leftbar/Leftbar';
 import Newsfeed from '../../components/newsfeed/Newsfeed';
 import Rightbar from '../../components/rightbar/Rightbar';
 
-const Home = () => {
+const Home = ({ user }) => {
   return (
     <div className="home">
-      <Topbar />
+      <Topbar currentUser={user} />
       <div className="home__body">
-        <Leftbar />
-        <Newsfeed />
-        <Rightbar />
+        <Leftbar currentUser={user} />
+        <Newsfeed currentUser={user} />
+        <Rightbar currentUser={user} />
       </div>
     </div>
   );

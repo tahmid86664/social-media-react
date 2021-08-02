@@ -1,0 +1,68 @@
+@import "../../global.scss";
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e9faff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .login__wrapper {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+
+    .login__left,.login__right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .login__left {
+
+      .login__logo {
+        font-size: 70px;
+        font-weight: 800;
+        color: $maincolor;
+      }
+
+      .login__desc {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+
+    .login__right {
+      align-items: center;
+
+      .login__users {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .login__userName {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          cursor: pointer;
+
+          img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+          }
+
+          span {
+            font-size: 18px;
+            font-weight: 500;
+          }
+        }
+      }
+    }  
+  }
+}

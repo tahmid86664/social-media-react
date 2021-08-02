@@ -4,7 +4,7 @@ import { RssFeed, Chat, Theaters, Group, Event, Bookmark, Help, Work } from '@ma
 import { users } from '../../mockData';
 import CloseFriends from '../close_friends/CloseFriends';
 
-const Leftbar = () => {
+const Leftbar = ({currentUser}) => {
   return (
     <div className="leftbar">
       <div className="leftbar__wrapper">
@@ -46,7 +46,7 @@ const Leftbar = () => {
         <hr className="leftbar__hr" />
         <ul className="leftbar__friendList">
           {
-            users.filter(user => !user.isLogin).map(user => 
+            users.filter(user => user.id !== currentUser).map(user => 
               <CloseFriends key={user.id} user={user} />
             )
           }

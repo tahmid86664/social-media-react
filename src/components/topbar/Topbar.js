@@ -3,7 +3,7 @@ import './Topbar.scss';
 import { Search, Person, Chat, Notifications } from '@material-ui/icons';
 import { users } from '../../mockData';
 
-const Topbar = () => {
+const Topbar = ({currentUser}) => {
   return (
     <div className="topbar">
       <div className="topbarLeft">
@@ -34,7 +34,7 @@ const Topbar = () => {
             <span className="topbarIconBadge">1</span>
           </div>
         </div>
-        <img className="topbarProfileImg" src={users.filter(user => user.isLogin)[0].imgUrl} alt="profile" />
+        <img className="topbarProfileImg" src={users.filter(user => user.id === currentUser)[0].imgUrl} alt="profile" />
       </div>
     </div>
   );

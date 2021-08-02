@@ -3,10 +3,10 @@ import './Newsfeed.scss';
 import Share from '../share/Share';
 import Posts from '../posts/Posts';
 
-const Newsfeed = () => {
+const Newsfeed = ({currentUser}) => {
   return (
     <div className="newsfeed">
-      <Share />
+      <Share currentUser={currentUser} />
       <Posts />
     </div>
   );
