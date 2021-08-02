@@ -16,9 +16,11 @@ function App() {
     <div className="app">
       <Switch>
         <Route exact path="/">
-          { !user ? <Redirect to="/dummylogin" /> : <Home user={user} />}
+          { !user ? <Redirect to="/dummylogin" /> : <Home user={user} setUser={setUser} />}
         </Route>
-        <Route path="/user/:userId" component={Profile} />
+        <Route path="/user/:userId">
+          <Profile setUser={setUser} />
+        </Route>
         <Route path="/dummylogin">
           <DummyLogin user={user} setUser={setUser} />
         </Route>

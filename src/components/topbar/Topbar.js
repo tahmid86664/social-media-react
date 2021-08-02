@@ -1,13 +1,24 @@
 import React from 'react';
 import './Topbar.scss';
-import { Search, Person, Chat, Notifications } from '@material-ui/icons';
+import { Search, Person, Chat, Notifications, ExitToApp } from '@material-ui/icons';
 import { users } from '../../mockData';
+import { Link, useHistory } from 'react-router-dom';
 
-const Topbar = ({currentUser}) => {
+const Topbar = ({ currentUser, setUser }) => {
+  const history = useHistory();
+
+  const handleLogout = () => {
+    setUser(null);
+
+    history.push('/');
+  }
+
   return (
     <div className="topbar">
       <div className="topbarLeft">
-        <span className="topbarLogo">Friendlyyy</span> 
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="topbarLogo">Friendlyyy</span> 
+        </Link>
       </div>
       <div className="topbarCenter">
         <div className="searchbar">
@@ -33,8 +44,13 @@ const Topbar = ({currentUser}) => {
             <Notifications />
             <span className="topbarIconBadge">1</span>
           </div>
+          <div className="topbarIcon" onClick={handleLogout}>
+            <ExitToApp />
+          </div>
         </div>
-        <img className="topbarProfileImg" src={users.filter(user => user.id === currentUser)[0].imgUrl} alt="profile" />
+        <Link to={`/user/${currentUser}`} style={{ textDecoration: "none" }}>
+          <img className="topbarProfileImg" src={users.filter(user => user.id === currentUser)[0].imgUrl} alt="profile" />
+        </Link>
       </div>
     </div>
   );

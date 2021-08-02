@@ -2,7 +2,7 @@ import React from 'react';
 import './ProfileRightbar.scss';
 import { users } from '../../mockData';
 
-const ProfileRightbar = () => {
+const ProfileRightbar = ({ currentUser }) => {
   return (
     <div className="profileRightbar">
       <div className="profileRightbar__infoContainer">
@@ -29,7 +29,7 @@ const ProfileRightbar = () => {
       <h4 className="profileRightbar__friendContainerTitle">Friends</h4>
       <div className="profileRightbar__friendContainer">
         {
-          users.filter(user => !user.isLogin).map(friend => 
+          users.filter(user => user.id !== currentUser).map(friend => 
             <div className="profileRightbar__friend">
               <img src={friend.imgUrl} alt="friend img" className="profileRightbar__friendImg" />
               <span>{friend.name}</span>
