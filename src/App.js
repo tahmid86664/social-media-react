@@ -24,8 +24,12 @@ function App() {
         <Route path="/dummylogin">
           <DummyLogin user={user} setUser={setUser} />
         </Route>
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/register"> 
+          <Register />
+        </Route>
       </Switch>
     </div>
     </Router>

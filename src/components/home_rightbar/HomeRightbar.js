@@ -30,7 +30,7 @@ const HomeRightbar = ({currentUser}) => {
         </span>
       </div>
       <div className="rightbar__ad">
-        <img src="/assets/ad.png" alt="ad img" className="rightbar__adImg" />
+        <img src="/assets/ad.jpg" alt="ad img" className="rightbar__adImg" />
       </div>
       <div className="rightbar__onlineFriendsContainer">
         <h4>Online Friends</h4>
